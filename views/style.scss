@@ -13,6 +13,27 @@
      src: url('/fonts/ocraext.ttf');
 }
 
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 -100%; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 1.3s linear 5;
+}
+
+.background-scroll {
+  animation: animatedBackground 40s linear infinite;
+}
+
+
 
 /*---------------------------------
 
@@ -22,12 +43,13 @@
 
 body {
   background-image: url('/images/felt__background.png');
-  color: #fff;
+  color: #e3e3e3;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Matrix_title;
-  color: #34DC47;
+  color: #54DC47;
+  line-height: 1.1em;
 }
 
 p, label, input {
@@ -46,6 +68,16 @@ h3 {
   font-size: 1.4em;
 }
 
+a {
+  text-decoration: none;
+  color: #ada;
+}
+
+span {
+  background-color: transparent;
+  color: #dad;
+}
+
 /*---------------------------------
 
   #SECTION - #Cipher
@@ -59,6 +91,9 @@ h3 {
   overflow: hidden;
 }
 
+/* Header
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .cipher__header {
   min-width: 320px;
   margin: auto;
@@ -66,7 +101,23 @@ h3 {
 
 .cipher__heading1 {
   text-align: center;
-  box-shadow: 2px -1px 8px #ada;
+  box-shadow: 4px -1px 14px -2px lime;
+  
+  background-image: url("images/terminal__background.png");
+  background-position: center;
+  background-size: auto;
+	background-repeat: repeat-y;
+
+	// animation: animatedBackground 40s linear infinite;
+  // animation-iteration-count: infinite;
+}
+
+.cipher__heading1--spacer {
+  
+}
+
+.cipher__heading1:hover {
+  box-shadow: 4px -1px 14px 0px lime;
 }
 
 .cipher__heading2 {
@@ -76,8 +127,29 @@ h3 {
 }
 
 .cipher__heading3 {
-  margin-left: 24%;  
+  margin-left: 20%;
 }
+
+/* Paragraphs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.introduction__paragraph {
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 1.3em;
+  letter-spacing: -2px;
+}
+
+.cursor__span {
+  display: inline-block;
+  height: 1em;
+  width: 0.5em;
+  background-color: #ddd;
+  margin-left: 2px;
+}
+
 
 /*---------------------------------
 
@@ -85,11 +157,11 @@ h3 {
   
 ---------------------------------*/
 
-/* Form
+/* Local
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 form {
-  background-color: #ada;
+  // background-color: #ada;
 }
 
 label {
@@ -100,14 +172,31 @@ input {
   display: block;
 }
 
-/* Encrypter
+/* Label
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+label {
+  font-size: 1.1em;
+  letter-spacing: -1px;
+}
+
+
+/* Textarea
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .encrypter__textarea {
   display: block;
-  width: 90%;
+  width: 82%;
   min-height: 120px;
   margin: auto;
   overflow: auto;
   resize: none;
+  
+  background-color: #111;
+  color: #fff;
+  border-style: outset;
+  padding: 1em;
+  font-size: 1.2em;
+  
+  margin-top: 0.6em;
+  margin-bottom: 1.4em;
 }
