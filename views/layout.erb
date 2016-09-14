@@ -23,11 +23,12 @@
         
         <%= erb :_introduction %>
         
-        <p><%= yield %></p>
+        <%= yield %>
         
-        <p><%= response %></p>
-        
-        <p><%= encrypted_message %></p>
+        <div class="spacer__div--dynamic">
+          <p class="response__paragraph"><%= response %></p>
+          <p class="encrypted-message__paragraph"><%= encrypted_message %></p>
+        </div>
       </article>
       
     </section>    

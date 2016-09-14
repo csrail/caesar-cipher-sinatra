@@ -177,6 +177,8 @@ input {
 label {
   font-size: 1.1em;
   letter-spacing: -1px;
+  color: #FFDB8B;
+  margin-left: 6px;
 }
 
 
@@ -197,6 +199,54 @@ label {
   padding: 1em;
   font-size: 1.2em;
   
-  margin-top: 0.6em;
-  margin-bottom: 1.4em;
+  margin-top: 0.7em;
+  margin-bottom: 1.6em;
 }
+
+
+/* Input
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.input--number {
+  display: inline-block;
+  height: 2em;
+  width: 5em;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.input--submit {
+  display: inline-block;
+  margin-top: 0.4em;
+  margin-left: 0.4em;
+  width: 6em;
+}
+
+
+/*---------------------------------
+
+  #DIV - #RESPONSE
+  
+---------------------------------*/
+
+/* Div
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.spacer__div--dynamic {
+  width: 76%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+/* Paragraph
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.response__paragraph {
+  font-size: 1.3em;
+  margin-bottom: 0.7em;
+  text-decoration: underline;
+  text-decoration-color: #ED3F3F;
+}
+
+.encrypted-message__paragraph {
+  text-indent: 1.6em;
+  font-size: 1.1em;
+}
+  
