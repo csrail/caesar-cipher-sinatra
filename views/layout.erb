@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    
+    <link rel="stylesheet" href="app.css">
+  </head>
+  
+  <body>
+    <h1>Caesar Cipher</h1>
+    
+    <section>
+      <p>
+        The Caesar Cipher is a simple encryption technique which substitutes one letter for a different one based on the shift factor used.<br><br>
+        This encryption technique was named after Julius Caesar who used it in his private messages.
+      </p>
+      <p>
+        <%= yield %>
+      </p>
+      <p>
+        <%= response %>
+      </p>
+      <p>
+        <%= encrypted_message %>
+      </p>
+    </section>    
+    
+  </body>
+  
+</html>
+  
