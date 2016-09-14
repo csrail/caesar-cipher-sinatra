@@ -17,16 +17,23 @@ get '/style.css' do
 end
 
 
-get '/' do
-  if params.empty?
-    encryption = ""
-  else
-    response = "Your encrypted message:"
-    encryption = cipher(params[:message], params[:shift_factor].to_i)
-  end
     
-  erb :app, :locals => { :encrypted_message => encryption,
-                         :response          =>  response
+get '/' do
+  @encryption = nil
+  
+  erb :app, :locals => { :encrypted_message => @encryption,
+                       }
+end
+
+post '/' do
+  if params.empty?
+    @encryption = ""
+  else
+    @encryption = cipher(params[:message], params[:shift_factor].to_i)
+  end
+  
+  
+  erb :app, :locals => { :encrypted_message => @encryption,
                        }
 end
 

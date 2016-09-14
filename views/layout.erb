@@ -26,8 +26,10 @@
         <%= yield %>
         
         <div class="spacer__div--dynamic">
-          <p class="response__paragraph"><%= response %></p>
-          <p class="encrypted-message__paragraph"><%= encrypted_message %></p>
+          <% if response%>
+            <p class="response__paragraph">Your encrypted message:</p>
+            <p class="encrypted-message__paragraph"><%= encrypted_message %></p>
+          <% end %>
         </div>
       </article>
       
