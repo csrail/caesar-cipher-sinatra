@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Caesar Cipher</title>
     
-    <link rel="stylesheet" href="app.css">
+    <%= css :reset, :media_query, :style %>
   </head>
   
   <body>
-    <h1>Caesar Cipher</h1>
+    <div class="media-query__div"></div>
     
-    <section>
-      <p>
-        The Caesar Cipher is a simple encryption technique which substitutes one letter for a different one based on the shift factor used.<br><br>
-        This encryption technique was named after Julius Caesar who used it in his private messages.
-      </p>
-      <p>
-        <%= yield %>
-      </p>
-      <p>
-        <%= response %>
-      </p>
-      <p>
-        <%= encrypted_message %>
-      </p>
+    <section class="cipher__section">
+      <article class="">
+        <header class="cipher__header">
+          <h3 class="cipher__heading3">THE</h3>
+          <h1 class="cipher__heading1">CAESAR CIPHER</h1>
+          <h2 class="cipher__heading2">RELOADED</h2>
+        </header>
+        
+        <%= erb :_introduction %>
+        
+        <p><%= yield %></p>
+        
+        <p><%= response %></p>
+        
+        <p><%= encrypted_message %></p>
+      </article>
+      
     </section>    
     
   </body>

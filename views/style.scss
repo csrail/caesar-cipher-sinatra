@@ -1,0 +1,113 @@
+/*---------------------------------
+  
+  #FONTS
+  
+---------------------------------*/
+@font-face {
+     font-family: 'Matrix_title';
+     src: url('/fonts/Miltown_.ttf');
+}
+
+@font-face {
+     font-family: 'Matrix_text';
+     src: url('/fonts/ocraext.ttf');
+}
+
+
+/*---------------------------------
+
+  #GLOBAL
+  
+---------------------------------*/
+
+body {
+  background-image: url('/images/felt__background.png');
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Matrix_title;
+  color: #34DC47;
+}
+
+p, label, input {
+  font-family: Matrix_text;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+/*---------------------------------
+
+  #SECTION - #Cipher
+  
+---------------------------------*/
+
+.cipher__section {
+  min-width: 320px;
+  max-width: 768px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.cipher__header {
+  min-width: 320px;
+  margin: auto;
+}
+
+.cipher__heading1 {
+  text-align: center;
+  box-shadow: 2px -1px 8px #ada;
+}
+
+.cipher__heading2 {
+  position: relative;
+  text-align: right;
+  margin-right: 2%;
+}
+
+.cipher__heading3 {
+  margin-left: 24%;  
+}
+
+/*---------------------------------
+
+  #FORM - #Cipher
+  
+---------------------------------*/
+
+/* Form
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+form {
+  background-color: #ada;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+}
+
+/* Encrypter
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.encrypter__textarea {
+  display: block;
+  width: 90%;
+  min-height: 120px;
+  margin: auto;
+  overflow: auto;
+  resize: none;
+}

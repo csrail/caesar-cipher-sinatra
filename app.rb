@@ -1,8 +1,21 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require 'sinatra/flash'
+require 'sass'
 
 require_relative 'cipher'
+
+helpers do
+  def css(*stylesheets)
+    stylesheets.map do |stylesheet|
+      "<link rel=\"stylesheet\" href=\"/#{stylesheet}.css\">"
+    end.join
+  end
+end
+
+get '/style.css' do
+  scss :style
+end
+
 
 get '/' do
   if params.empty?
@@ -11,8 +24,6 @@ get '/' do
     response = "Your encrypted message:"
     encryption = cipher(params[:message], params[:shift_factor].to_i)
   end
-  
-  
     
   erb :app, :locals => { :encrypted_message => encryption,
                          :response          =>  response
