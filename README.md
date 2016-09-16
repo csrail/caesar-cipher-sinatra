@@ -13,7 +13,7 @@ The CSS styling uses BEM syntax and the sass compiler. BEM syntax is a favourite
 
 
 ## Excursion
-I had difficulty showing the output of ruby logic that should only exist after a POST request and not during the default GET request. In particular the "Your Encrypted Message:" string should not be printed into the <p> element unless a POST request was made. Initially I kept assigning this string to an instance variable in the `post ('/')` block but on trying to run a GET request it would set me up with a `NoMethodError for Nil Class`. This made me assume that the issue was the instance variable did not exist in the `get ('/')` block and after assigning instance variables to mirror the ones done in the `post ('/')` block I still received the same or similar error related to Nil Class.
+I had difficulty showing the output of ruby logic that should only exist after a POST request and not during the default GET request. In particular the "Your Encrypted Message:" string should not be printed into the `<p>` element unless a POST request was made. Initially I kept assigning this string to an instance variable in the `post ('/')` block but on trying to run a GET request it would set me up with a `NoMethodError for Nil Class`. This made me assume that the issue was the instance variable did not exist in the `get ('/')` block and after assigning instance variables to mirror the ones done in the `post ('/')` block I still received the same or similar error related to Nil Class.
 
 The solution to this problem was to assign the string to a local variable. By assigning it to a local variable, other requests are not aware of this variable. However it does have the limitation of not being able to be shared across multiple routes but perhaps this is intended.
 
@@ -31,7 +31,7 @@ I have started to use partials within my views and it enables me to DRY out my h
 
 
 ## Expletives
-Currently I am unable to format the `encrypted-message__paragraph` adequately as the default *whitespace* property for <p> elements collapses all whitespaces into a single line. The *whitespace* property for <pre> if set to pre-wrap or pre-line still does not render the text adequately as in-built line breaks within the text produce a jagged and jarring effect. I would have to write a script to parse through the `\r\n` of the text before feeding the text as a string into the cipher.
+Currently I am unable to format the `encrypted-message__paragraph` adequately as the default *whitespace* property for `<p>` elements collapses all whitespaces into a single line. The *whitespace* property for <pre> if set to pre-wrap or pre-line still does not render the text adequately as in-built line breaks within the text produce a jagged and jarring effect. I would have to write a script to parse through the `\r\n` of the text before feeding the text as a string into the cipher.
 
 
 ## Eggs
