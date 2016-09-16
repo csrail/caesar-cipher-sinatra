@@ -302,10 +302,10 @@ input[type=number] {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .overlay__div--tint {
   position: absolute;
-  background-color: #111;
+  background-color: #46e;
   width: 100%;
   height: 100%;
-  opacity: 0.1;
+  opacity: 0.11;
   pointer-events: none;
   z-index: 1;
 }
@@ -329,20 +329,21 @@ input[type=number] {
   padding-top: 4em;
   font-family: vcr;
   display: inline-block;
+  margin-left: 1em;
 }
 
 .attribution__list-item {
   font-size: 1em;
   display: inline-block;
   float: left;
-  padding: 1em 2em 1em 2em;
+  padding: 1em 1em 1em 2em;
   font-size: 1.2em;
 }
 
-.attribution__list-item a {
+.attribution__unordered-list a {
   color: #eee;
 }
 
-.attribution__list-item a:hover {
+.attribution__list-item:hover {
   color: #9f9;
 }
