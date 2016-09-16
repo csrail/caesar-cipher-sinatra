@@ -31,7 +31,7 @@ I have started to use partials within my views and it enables me to DRY out my h
 
 
 ## Expletives
-Currently I am unable to format the `encrypted-message__paragraph` adequately as the default *whitespace* property for `<p>` elements collapses all whitespaces into a single line. The *whitespace* property for <pre> if set to pre-wrap or pre-line still does not render the text adequately as in-built line breaks within the text produce a jagged and jarring effect. I would have to write a script to parse through the `\r\n` of the text before feeding the text as a string into the cipher.
+Currently I am unable to format the `encrypted-message__paragraph` adequately as the default *whitespace* property for `<p>` elements collapses all whitespaces into a single line. The *whitespace* property for `<pre>` if set to pre-wrap or pre-line still does not render the text adequately as in-built line breaks within the text produce a jagged and jarring effect. I would have to write a script to parse through the `\r\n` of the text before feeding the text as a string into the cipher.
 
 
 ## Eggs
