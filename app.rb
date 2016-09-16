@@ -26,14 +26,18 @@ get '/' do
 end
 
 post '/' do
-  if params.empty?
+  if params[:message].empty?
     @encryption = ""
+    response = "\"The cipher strives to convey some strange message, yet recalls nothing save that it once had a message to convey.\""
   else
+    response_active = "Your Encrypted Message:"
     @encryption = cipher(params[:message], params[:shift_factor].to_i)
   end
   
   
   erb :app, :locals => { :encrypted_message => @encryption,
+                         :response          => response,
+                         :response_active   => response_active
                        }
 end
 

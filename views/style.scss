@@ -275,9 +275,12 @@ input[type=number] {
 .response__paragraph {
   font-size: 1.3em;
   margin-bottom: 0.7em;
+  color: #FFDB8B;
+}
+
+.response__paragraph--active {
   text-decoration: underline;
   text-decoration-color: #ED3F3F;
-  color: #FFDB8B;
 }
 
 .encrypted-message__paragraph {
